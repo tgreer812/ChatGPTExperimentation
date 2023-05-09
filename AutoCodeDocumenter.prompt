@@ -1,0 +1,31 @@
+Please provide comments for the following code files in the given JSON input.
+Add comments to each file based on the content and structure of the code to make it more understandable.
+The file types to comment on are listed in the FILE_TYPES section.
+Please output the commented code in JSON format with key:filename and value:file contents with added comments.
+
+FILE_TYPES: ["py", "js", "java", "cpp"]
+
+JSON_INPUT: {"file1.py": "def sum(a, b):\n    return a + b", "file2.js": "function hello() {\n    console.log('Hello, world!');\n}"}
+
+Note: Replace the JSON_INPUT and FILE_TYPES with the actual input and desired file types.
+
+
+{
+  "model": "gpt-4",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AI language model tasked with adding comments to code files in a given JSON input. The file types to comment on are listed in the FILE_TYPES section. Please output the commented code in JSON format with key:filename and value:file contents with added comments."
+    },
+    {
+      "role": "user",
+      "content": 'FILE_TYPES: ["py", "js", "java", "cpp"]'
+    },
+    {
+      "role": "user",
+      "content": 'JSON_INPUT: {"file1.py": "def sum(a, b):\\n    return a + b", "file2.js": "function hello() {\\n    console.log(\'Hello, world!\');\\n}"}'
+    }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 100
+}
